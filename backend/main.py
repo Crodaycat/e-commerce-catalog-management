@@ -29,7 +29,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-UPLOAD_DIRECTORY="C:\\Users\\luis_\\programming\\e_commerce_catalog\\backend\\uploads"
+UPLOAD_DIRECTORY="~/uploads"
 
 
 class Health(BaseModel):

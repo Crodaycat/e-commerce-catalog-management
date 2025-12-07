@@ -2,7 +2,7 @@ from databases import Database
 from sqlalchemy import create_engine, MetaData, Column, Integer, String, Table, DateTime, Float
 import os
 
-DATABASE_URL = os.getenv("DATABASE_URL", "postgresql://postgres:root@localhost:5432/postgres")
+DATABASE_URL = os.getenv("DATABASE_URL")
 
 
 database = Database(DATABASE_URL)
@@ -19,3 +19,4 @@ products = Table(
 )
 
 engine = create_engine(DATABASE_URL)
+metadata.create_all(engine)
